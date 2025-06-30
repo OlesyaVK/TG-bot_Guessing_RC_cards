@@ -4,9 +4,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.strategy import FSMStrategy
 from dotenv import load_dotenv
-from handlers import register_handlers
-import sys
-print(sys.path)  # Проверить пути импорта
+from .handlers import register_handlers
 
 load_dotenv()
 
