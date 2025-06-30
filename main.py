@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.strategy import FSMStrategy
 from dotenv import load_dotenv
-from handlers import register_handlers
+from TG-bot_Guessing_RC_cards.handlers import register_handlers
 
 load_dotenv()
 
