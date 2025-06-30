@@ -1,0 +1,8 @@
+from .commands import register_handlers as register_commands
+from .callbacks import register_handlers as register_callbacks
+from .game import register_handlers as register_game_handlers
+
+def register_handlers(dp):
+    register_commands(dp)
+    register_callbacks(dp)
+    register_game_handlers(dp)
