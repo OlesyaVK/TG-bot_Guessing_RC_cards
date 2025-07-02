@@ -1,5 +1,4 @@
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from data.cards import CARDS_DATA
 
 def get_cards_keyboard():
     builder = InlineKeyboardBuilder()
