@@ -4,7 +4,11 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.strategy import FSMStrategy
 from dotenv import load_dotenv
-from handlers import register_handlers
+
+# Импорты из отдельных файлов
+from commands import register_commands
+from callbacks import register_callbacks
+from game import register_game_handlers
 
 load_dotenv()
 
@@ -17,6 +21,12 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("bot.log"), logging.StreamHandler()]
 )
+
+# Явная регистрация всех обработчиков
+def register_all_handlers():
+    register_commands(dp)
+    register_callbacks(dp)
+    register_game_handlers(dp)
 
 async def on_startup():
     register_handlers(dp)
