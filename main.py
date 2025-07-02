@@ -23,13 +23,13 @@ logging.basicConfig(
 )
 
 # Явная регистрация всех обработчиков
-def register_all_handlers():
-    register_commands(dp)
-    register_callbacks(dp)
-    register_game_handlers(dp)
+def register_all_handlers(dispatcher: Dispatcher):  # Принимаем dispatcher как параметр
+    register_commands(dispatcher)
+    register_callbacks(dispatcher)
+    register_game_handlers(dispatcher)
 
 async def on_startup():
-    register_all_handlers(dp)
+    register_all_handlers(dp)  # Передаем dp в функцию
     logging.info("Бот запущен")
 
 async def main():
