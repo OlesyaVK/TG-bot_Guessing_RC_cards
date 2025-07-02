@@ -29,7 +29,7 @@ def register_all_handlers():
     register_game_handlers(dp)
 
 async def on_startup():
-    register_handlers(dp)
+    register_all_handlers(dp)
     logging.info("Бот запущен")
 
 async def main():
