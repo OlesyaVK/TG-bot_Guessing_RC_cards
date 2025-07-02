@@ -3,7 +3,6 @@ from aiogram.types import CallbackQuery
 from aiogram.fsm.context import FSMContext
 from states import GameStates
 from keyboards import get_names_keyboard, get_end_game_keyboard
-from data.cards import CARDS_DATA
 
 active_games: dict[int, dict] = {}
 
