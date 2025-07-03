@@ -16,7 +16,7 @@ async def cmd_start(message: types.Message, state: FSMContext):
 
 
 async def cmd_join(message: types.Message):
-    from handlers.game import active_games, start_player_turn
+    from game import active_games, start_player_turn
 
     if message.chat.id not in active_games:
         await message.answer("Сейчас нет активной игры!")
